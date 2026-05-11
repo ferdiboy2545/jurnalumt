@@ -53,7 +53,7 @@ body{
   animation:rain linear infinite;
 }
 
-/* LEBIH SEDIKIT = LEBIH RINGAN */
+/* POSISI */
 
 .rain span:nth-child(1){
   left:10%;
@@ -98,6 +98,7 @@ body{
 
 .card{
   position:relative;
+
   z-index:10;
 
   width:350px;
@@ -144,6 +145,9 @@ body{
   background-size:200% 200%;
 
   animation:borderMove 3s linear infinite;
+
+  /* FIX BUTTON */
+  pointer-events:none;
 
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -277,6 +281,7 @@ p{
 <!-- CARD -->
 <div class="card">
 
+  <!-- FOTO -->
   <img src="profile.jpg" class="profile">
 
   <h1>JURNAL UMT</h1>
@@ -285,18 +290,21 @@ p{
     Media informasi, kreativitas, dan inspirasi mahasiswa 🚀
   </p>
 
+  <!-- INSTAGRAM -->
   <a href="https://www.instagram.com/jurnalumt/"
   class="btn ig"
   target="_blank">
     Instagram
   </a>
 
+  <!-- WHATSAPP -->
   <a href="https://wa.me/6281584913830"
   class="btn wa"
   target="_blank">
     WhatsApp
   </a>
 
+  <!-- TIKTOK -->
   <a href="https://www.tiktok.com/@jurnalumt"
   class="btn tt"
   target="_blank">
@@ -304,7 +312,7 @@ p{
   </a>
 
   <div class="footer">
-   
+    Scan QR • Open My Links
   </div>
 
 </div>
