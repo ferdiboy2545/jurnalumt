@@ -24,7 +24,9 @@ body{
   position:relative;
 }
 
-/* GOLD RAIN BACKGROUND */
+/* =========================
+   GOLD RAIN BACKGROUND
+========================= */
 
 .rain{
   position:absolute;
@@ -46,7 +48,11 @@ body{
     rgba(250,204,21,0)
   );
 
-  box-shadow:0 0 15px #facc15;
+  box-shadow:
+  0 0 10px #facc15,
+  0 0 20px #facc15,
+  0 0 40px #facc15;
+
   animation:goldRain linear infinite;
 }
 
@@ -115,12 +121,14 @@ body{
 
   100%{
     transform:translateY(120vh);
-    opacity:0;
+    opacity:1;
   }
 
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 
 .card{
   position:relative;
@@ -132,32 +140,40 @@ body{
   overflow:hidden;
 
   background:rgba(15,23,42,0.78);
+
   backdrop-filter:blur(14px);
 
   box-shadow:
   0 0 20px rgba(250,204,21,0.2),
-  0 0 40px rgba(250,204,21,0.1);
+  0 0 40px rgba(250,204,21,0.2);
 }
 
-/* BORDER NEON BERJALAN */
+/* =========================
+   NEON BORDER
+========================= */
 
 .card::before{
   content:'';
   position:absolute;
-  inset:-2px;
+  inset:-3px;
   border-radius:25px;
 
   background:linear-gradient(
     90deg,
-    transparent,
     #facc15,
     #fff7cc,
+    #ffd700,
     #facc15,
-    transparent
+    #fff7cc,
+    #ffd700,
+    #facc15
   );
 
-  background-size:300% 300%;
-  animation:neonRun 5s linear infinite;
+  background-size:400% 400%;
+
+  animation:neonRun 3s linear infinite;
+
+  filter:blur(2px);
 
   z-index:-2;
 }
@@ -167,13 +183,16 @@ body{
 .card::after{
   content:'';
   position:absolute;
-  inset:2px;
-  border-radius:23px;
+  inset:3px;
+
+  border-radius:22px;
 
   background:rgba(15,23,42,0.96);
 
   z-index:-1;
 }
+
+/* ANIMASI BORDER */
 
 @keyframes neonRun{
 
@@ -182,12 +201,14 @@ body{
   }
 
   100%{
-    background-position:300% 50%;
+    background-position:400% 50%;
   }
 
 }
 
-/* FOTO */
+/* =========================
+   FOTO
+========================= */
 
 .profile{
   width:120px;
@@ -203,14 +224,23 @@ body{
 @keyframes glow{
 
   from{
-    box-shadow:0 0 10px #facc15;
+    box-shadow:
+    0 0 10px #facc15,
+    0 0 20px #facc15;
   }
 
   to{
-    box-shadow:0 0 35px #facc15;
+    box-shadow:
+    0 0 20px #facc15,
+    0 0 40px #facc15,
+    0 0 60px #facc15;
   }
 
 }
+
+/* =========================
+   TEXT
+========================= */
 
 h1{
   color:#fff;
@@ -224,7 +254,9 @@ p{
   font-size:14px;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 
 .btn{
   display:block;
@@ -322,6 +354,7 @@ p{
   </a>
 
   <div class="footer">
+    
   </div>
 
 </div>
